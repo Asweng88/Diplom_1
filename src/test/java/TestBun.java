@@ -9,16 +9,12 @@ public class TestBun {
 
     @Test
     public void getNameBun() {
-
         Bun bun = new Bun(name, price);
         assertEquals("Ошибка валидации", name, bun.getName());
     }
-
     @Test
     public void getPriceBun() {
-
         Bun bun = new Bun(name, price);
         assertEquals("Ошибка валидации", price, bun.getPrice(), 0);
     }
-
 }
