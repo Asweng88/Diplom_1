@@ -9,7 +9,6 @@ import praktikum.Burger;
 import praktikum.Ingredient;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 import static praktikum.IngredientType.SAUCE;
 
@@ -31,7 +30,7 @@ public class TestBurgerGetPrice {
     @Test
     public void testGetPrice() {
         when(bun.getPrice()).thenReturn(10F);
-        doReturn(30F).when(ingredient).getPrice();
+        when(ingredient.getPrice()).thenReturn(30F);
         assertEquals("Ошибка валидации", burger.getPrice(), 50, 0);
     }
 }

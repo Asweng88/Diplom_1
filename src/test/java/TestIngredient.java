@@ -13,16 +13,16 @@ public class TestIngredient {
     private final String name;
     private final float price;
 
-    public TestIngredient(IngredientType type, String name, float price){
-        this.type=type;
-        this.name=name;
-        this.price=price;
+    public TestIngredient(IngredientType type, String name, float price) {
+        this.type = type;
+        this.name = name;
+        this.price = price;
     }
 
     @Parameterized.Parameters
     public static Object[][] value() {
         //Сгенерируй тестовые данные
-        return new Object[][] {
+        return new Object[][]{
                 {IngredientType.FILLING, "Лук", 10},
                 {IngredientType.SAUCE, "Цезарь", 20},
         };

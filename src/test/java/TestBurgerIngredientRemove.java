@@ -17,19 +17,16 @@ public class TestBurgerIngredientRemove {
     Burger burger = new Burger();
 
     @Before
-    public void addIngredient(){
+    public void addIngredient() {
 
         burger.addIngredient(ingredientFilling);
         burger.addIngredient(ingredientSauce);
     }
 
-
     @Test
     public void testRemoveIngredient() {
-
         burger.removeIngredient(0);
         assertEquals("Количество элементов не соответствует ожидаемому", burger.ingredients.size(), 1);
         assertTrue("Ошибка валидации элемента ingredientSauce", burger.ingredients.contains(ingredientSauce));
     }
-
 }
